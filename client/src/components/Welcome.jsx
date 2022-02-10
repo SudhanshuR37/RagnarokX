@@ -29,6 +29,7 @@ const Welcome = () => {
     setFormData,
     handleChange,
     sendTransaction,
+    isLoading,
   } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
@@ -117,7 +118,7 @@ const Welcome = () => {
             ></Input>
 
             <div className="h-[1px] w-full bg-gray-400 my-2" />
-            {false ? (
+            {isLoading ? (
               <Loader></Loader>
             ) : (
               <button
